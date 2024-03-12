@@ -27,7 +27,8 @@ To use the Password Manager Software, follow these steps:
 2. Install the required dependencies specified in the `requirements.txt` file.
 3. Configure the database settings in the configuration files.
 4. Change .env.local to .env and add your own credentials
-5Run the main.py application using Python.
+5. Run generate_secret_key in the common_functions.py file to generate a secret key
+6. Paste the secret key and Run the main.py application using Python.
 
 ## Usage
 
