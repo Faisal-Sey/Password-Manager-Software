@@ -37,7 +37,7 @@ def create_table_if_not_exists_postgres(
         else:
             logger(
                 "table_creation",
-                "info",
+                "success",
                 "Table already exists in Postgres",
             )
 

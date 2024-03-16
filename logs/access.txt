@@ -1,5 +1,1 @@
-🔴 2024-03-11 15:27:58.931767: Error fetching passwords: 'psycopg2.extensions.connection' object has no attribute 'execute'
-🔴 2024-03-12 08:32:31.516304: Error fetching passwords: MAC check failed
-🔴 2024-03-12 08:44:38.686920: Error fetching passwords: Incorrect AES key length (84 bytes)
-🔴 2024-03-12 09:59:10.951854: Error fetching passwords: 
-🔴 2024-03-12 10:14:36.378925: Error fetching passwords: 'PasswordEntry' object has no attribute 'view_password'
+🔴 2024-03-16 09:46:09.510800: Error fetching passwords: 

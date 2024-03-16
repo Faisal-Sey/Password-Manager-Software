@@ -6,7 +6,6 @@ from components.main_window import PasswordManagerUI
 from components.view_password_window import ViewPasswordsFrame
 from components.edit_password_window import EditPasswordFrame
 from configuration.config import load_configurations
-from helpers.common_functions import generate_secret_key
 
 
 class PasswordManagerApp:
