@@ -2,28 +2,26 @@ import tkinter as tk
 from datetime import datetime
 from tkinter import messagebox
 from typing import Callable
-
-from pip._internal.utils import misc
-
 from helpers.common_functions import encrypt_password
 from services.queries import create_data
 from store.app_context import app_context
 
 
 class EditPasswordFrame(tk.Frame):
-    def __init__(self, master: misc, show_main_frame: Callable):
+    def __init__(self, master: tk.Tk, show_main_frame: Callable, theme_colors: dict):
         super().__init__(master)
         self.master: tk.Tk = master
         self.master.title("Edit Password")
         self.current_password_data = app_context.get_config("current_password_data")
 
-        self.configure(bg="#f0f0f0")  # Background color
+        # Configure background color
+        self.configure(bg=theme_colors["background"])  # Background color
 
         # Create frames for grouping
-        left_frame = tk.Frame(self, bg="#f0f0f0")
+        left_frame = tk.Frame(self, bg=theme_colors["background"])
         left_frame.grid(row=0, column=0, padx=10, pady=5)
 
-        right_frame = tk.Frame(self, bg="#f0f0f0")
+        right_frame = tk.Frame(self, bg=theme_colors["background"])
         right_frame.grid(row=0, column=1, padx=10, pady=5)
 
         # Labels and Entry widgets
@@ -44,7 +42,7 @@ class EditPasswordFrame(tk.Frame):
         self.checkbox_vars = {}
 
         for i, (label_text, widget_type) in enumerate(left_fields):
-            label = tk.Label(left_frame, text=label_text, font=("Arial", 12), bg="#f0f0f0")
+            label = tk.Label(left_frame, text=label_text, font=("Arial", 12), bg=theme_colors["background"], fg=theme_colors["text_color"])
             label.grid(row=i, column=0, sticky="w", padx=5, pady=5)
 
             widget = widget_type(left_frame, font=("Arial", 12), bg="white")
@@ -54,7 +52,9 @@ class EditPasswordFrame(tk.Frame):
                 show_password_button = tk.Button(
                     left_frame,
                     text="Show",
-                    command=lambda entry=password_entry: self.toggle_password_visibility(entry)
+                    command=lambda entry=password_entry: self.toggle_password_visibility(entry),
+                    bg=theme_colors["button_bg"],
+                    fg=theme_colors["button_fg"]
                 )
                 show_password_button.grid(row=i, column=2, padx=5, pady=5)
                 self.entry_widgets["password"] = password_entry
@@ -63,7 +63,7 @@ class EditPasswordFrame(tk.Frame):
                 self.entry_widgets[label_text.lower().strip(":").replace(" ", "_")] = widget
 
         for i, (label_text, widget_type) in enumerate(right_fields):
-            label = tk.Label(right_frame, text=label_text, font=("Arial", 12), bg="#f0f0f0")
+            label = tk.Label(right_frame, text=label_text, font=("Arial", 12), bg=theme_colors["background"], fg=theme_colors["text_color"])
             label.grid(row=i, column=0, sticky="w", padx=5, pady=5)
 
             if widget_type == tk.Text:
@@ -72,38 +72,42 @@ class EditPasswordFrame(tk.Frame):
                 self.entry_widgets[label_text.lower().strip(":").replace(" ", "_")] = widget
             elif widget_type == tk.Checkbutton:
                 widget_var = tk.BooleanVar()
-                widget = tk.Checkbutton(right_frame, variable=widget_var, onvalue=True, offvalue=False)
+                widget = tk.Checkbutton(right_frame, variable=widget_var, onvalue=True, offvalue=False, bg=theme_colors["background"], fg=theme_colors["text_color"])
                 self.checkbox_vars[label_text.lower().strip(":").replace(" ", "_")] = widget_var
                 widget.grid(row=i, column=1, padx=5, pady=5, sticky="w")
                 self.entry_widgets[label_text.lower().strip(":").replace(" ", "_")] = widget
 
         # Buttons
-        self.add_button = tk.Button(self, text="Add", font=("Arial", 12), bg="blue", fg="white",
+        self.add_button = tk.Button(self, text="Add", font=("Arial", 12), bg=theme_colors["button_bg"], fg=theme_colors["button_fg"],
                                     command=self.add_password)
         self.add_button.grid(row=1, column=0, columnspan=2, pady=10)
 
-        self.add_button = tk.Button(self, text="Back", font=("Arial", 12),
-                                    command=self.go_to_main_frame)
-        self.add_button.grid(row=2, column=0, columnspan=2, pady=14)
+        self.back_button = tk.Button(self, text="Back", font=("Arial", 12), bg=theme_colors["button_bg"], fg=theme_colors["button_fg"],
+                                     command=self.go_to_main_frame)
+        self.back_button.grid(row=2, column=0, columnspan=2, pady=14)
 
         # Function to navigate back to the main frame
         self.show_main_frame = show_main_frame
 
-        self.update_ui_for_edit(self.current_password_data)
+        # Load data into the UI for editing
+        if self.current_password_data:
+            self.update_ui_for_edit(self.current_password_data)
 
     def update_ui_for_edit(self, password_data: dict):
         # Set values from database for fields
-        print(self.entry_widgets)
         for field, value in password_data.items():
-            print(f"Field: {field}, Value: {value}")
             if field == "is_active" or field == "is_favorite":
                 self.checkbox_vars[field].set(value)
             elif field == "password":
                 self.entry_widgets[field].delete(0, tk.END)
                 self.entry_widgets[field].insert(0, value)
             else:
-                self.entry_widgets[field].delete("1.0", tk.END)
-                self.entry_widgets[field].insert("1.0", value)
+                if isinstance(self.entry_widgets[field], tk.Text):
+                    self.entry_widgets[field].delete("1.0", tk.END)
+                    self.entry_widgets[field].insert("1.0", value)
+                else:
+                    self.entry_widgets[field].delete(0, tk.END)
+                    self.entry_widgets[field].insert(0, value)
 
         # Update button text
         self.add_button.config(text="Edit", command=self.add_password)
@@ -123,7 +127,7 @@ class EditPasswordFrame(tk.Frame):
 
         encrypted_password: bytes = encrypt_password(password)
 
-        # Add the password to the database
+        # Add or update the password in the database
         data = {
             "title": title,
             "username": username,
@@ -147,7 +151,7 @@ class EditPasswordFrame(tk.Frame):
         )
 
         # Display success message
-        messagebox.showinfo("Success", "Password added successfully")
+        messagebox.showinfo("Success", "Password added/updated successfully")
 
         # Navigate back to main frame
         self.show_main_frame()

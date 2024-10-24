@@ -15,19 +15,19 @@ def toggle_password_visibility(entry):
 
 
 class AddPasswordFrame(tk.Frame):
-    def __init__(self, master, show_main_frame):
+    def __init__(self, master, show_main_frame, theme_colors):
         super().__init__(master)
         self.master = master
         self.master.title("Add Password")
 
         # Styling
-        self.configure(bg="#f0f0f0")  # Background color
+        self.configure(bg=theme_colors["background"])  # Background color
 
         # Create frames for grouping
-        left_frame = tk.Frame(self, bg="#f0f0f0")
+        left_frame = tk.Frame(self, bg=theme_colors["background"])
         left_frame.grid(row=0, column=0, padx=10, pady=5)
 
-        right_frame = tk.Frame(self, bg="#f0f0f0")
+        right_frame = tk.Frame(self, bg=theme_colors["background"])
         right_frame.grid(row=0, column=1, padx=10, pady=5)
 
         # Labels and Entry widgets
@@ -48,7 +48,7 @@ class AddPasswordFrame(tk.Frame):
         self.checkbox_vars = {}
 
         for i, (label_text, widget_type) in enumerate(left_fields):
-            label = tk.Label(left_frame, text=label_text, font=("Arial", 12), bg="#f0f0f0")
+            label = tk.Label(left_frame, text=label_text, font=("Arial", 12), bg=theme_colors["background"], fg=theme_colors["text_color"])
             label.grid(row=i, column=0, sticky="w", padx=5, pady=5)
 
             widget = widget_type(left_frame, font=("Arial", 12), bg="white")
@@ -58,7 +58,9 @@ class AddPasswordFrame(tk.Frame):
                 show_password_button = tk.Button(
                     left_frame,
                     text="Show",
-                    command=lambda entry=password_entry: self.toggle_password_visibility(entry)
+                    command=lambda entry=password_entry: self.toggle_password_visibility(entry),
+                    bg=theme_colors["button_bg"],
+                    fg=theme_colors["button_fg"]
                 )
                 show_password_button.grid(row=i, column=2, padx=5, pady=5)
                 self.entry_widgets["password"] = password_entry
@@ -67,7 +69,7 @@ class AddPasswordFrame(tk.Frame):
                 self.entry_widgets[label_text.lower().strip(":").replace(" ", "_")] = widget
 
         for i, (label_text, widget_type) in enumerate(right_fields):
-            label = tk.Label(right_frame, text=label_text, font=("Arial", 12), bg="#f0f0f0")
+            label = tk.Label(right_frame, text=label_text, font=("Arial", 12), bg=theme_colors["background"], fg=theme_colors["text_color"])
             label.grid(row=i, column=0, sticky="w", padx=5, pady=5)
 
             if widget_type == tk.Text:
@@ -76,19 +78,19 @@ class AddPasswordFrame(tk.Frame):
                 self.entry_widgets[label_text.lower().strip(":").replace(" ", "_")] = widget
             elif widget_type == tk.Checkbutton:
                 widget_var = tk.BooleanVar()
-                widget = tk.Checkbutton(right_frame, variable=widget_var, onvalue=True, offvalue=False)
-                self.checkbox_vars[label_text.lower().strip(":").replace(" ", "_")] = widget_var
+                widget = tk.Checkbutton(right_frame, variable=widget_var, onvalue=True, offvalue=False, bg=theme_colors["background"], fg=theme_colors["text_color"])
                 widget.grid(row=i, column=1, padx=5, pady=5, sticky="w")
+                self.checkbox_vars[label_text.lower().strip(":").replace(" ", "_")] = widget_var
                 self.entry_widgets[label_text.lower().strip(":").replace(" ", "_")] = widget
 
         # Buttons
-        self.add_button = tk.Button(self, text="Add", font=("Arial", 12), bg="blue", fg="white",
+        self.add_button = tk.Button(self, text="Add", font=("Arial", 12), bg=theme_colors["button_bg"], fg=theme_colors["button_fg"],
                                     command=self.add_password)
         self.add_button.grid(row=1, column=0, columnspan=2, pady=10)
 
-        self.add_button = tk.Button(self, text="Back", font=("Arial", 12),
-                                    command=self.go_to_main_frame)
-        self.add_button.grid(row=2, column=0, columnspan=2, pady=14)
+        back_button = tk.Button(self, text="Back", font=("Arial", 12), bg=theme_colors["button_bg"], fg=theme_colors["button_fg"],
+                                command=self.go_to_main_frame)
+        back_button.grid(row=2, column=0, columnspan=2, pady=14)
 
         # Function to navigate back to the main frame
         self.show_main_frame = show_main_frame

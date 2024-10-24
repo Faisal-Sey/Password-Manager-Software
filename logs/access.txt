@@ -1,1 +1,3 @@
 🔴 2024-03-16 09:46:09.510800: Error fetching passwords: 
+🔴 2024-03-19 08:16:46.503662: Error fetching passwords: current transaction is aborted, commands ignored until end of transaction block
+

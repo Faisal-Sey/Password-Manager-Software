@@ -12,3 +12,111 @@
 🔴 2024-03-16 09:46:04.821006: Error creating table in Postgres: 'info'
 🟢 2024-03-16 09:47:15.308825: Table already exists in Postgres
 🔴 2024-03-16 09:47:15.308825: Error creating table in Postgres: 'info'
+🟢 2024-03-16 10:14:35.570504: Table already exists in Postgres
+🔴 2024-03-16 10:14:35.570504: Error creating table in Postgres: 'info'
+🟢 2024-03-16 10:14:46.592149: Table already exists in Postgres
+🔴 2024-03-16 10:14:46.592149: Error creating table in Postgres: 'info'
+🟢 2024-03-16 10:15:56.897824: Table already exists in Postgres
+🔴 2024-03-16 10:15:56.898823: Error creating table in Postgres: 'info'
+🟢 2024-03-18 20:47:15.259604: Table already exists in Postgres
+🔴 2024-03-18 20:47:15.260607: Error creating table in Postgres: 'info'
+🟢 2024-03-18 20:47:37.932871: Table already exists in Postgres
+🔴 2024-03-18 20:47:37.932871: Error creating table in Postgres: 'info'
+🟢 2024-03-20 21:27:08.758413: Table already exists in Postgres
+🔴 2024-03-20 21:27:08.759597: Error creating table in Postgres: 'info'
+🟢 2024-03-30 15:19:24.043110: Table already exists in Postgres
+🔴 2024-03-30 15:19:24.046334: Error creating table in Postgres: 'info'
+🟢 2024-04-04 21:56:17.810967: Table already exists in Postgres
+🔴 2024-04-04 21:56:17.812008: Error creating table in Postgres: 'info'
+🟢 2024-04-06 13:38:56.591380: Table already exists in Postgres
+🔴 2024-04-06 13:38:56.592379: Error creating table in Postgres: 'info'
+🟢 2024-04-08 17:40:58.119743: Table already exists in Postgres
+🔴 2024-04-08 17:40:58.120726: Error creating table in Postgres: 'info'
+🟢 2024-04-09 22:32:38.187854: Table already exists in Postgres
+🔴 2024-04-09 22:32:38.189488: Error creating table in Postgres: 'info'
+🟢 2024-04-13 11:51:27.374351: Table already exists in Postgres
+🔴 2024-04-13 11:51:27.375352: Error creating table in Postgres: 'info'
+🟢 2024-04-26 17:58:50.268178: Table already exists in Postgres
+🔴 2024-04-26 17:58:50.269182: Error creating table in Postgres: 'info'
+🟢 2024-04-26 20:19:26.545115: Table already exists in Postgres
+🔴 2024-04-26 20:19:26.546100: Error creating table in Postgres: 'info'
+🟢 2024-04-26 20:30:53.855233: Table already exists in Postgres
+🔴 2024-04-26 20:30:53.856231: Error creating table in Postgres: 'info'
+🟢 2024-05-11 21:45:45.606676: Table already exists in Postgres
+🔴 2024-05-11 21:45:45.607693: Error creating table in Postgres: 'info'
+🟢 2024-05-12 08:02:56.087641: Table already exists in Postgres
+🔴 2024-05-12 08:02:56.088641: Error creating table in Postgres: 'info'
+🟢 2024-05-15 09:20:08.857859: Table already exists in Postgres
+🔴 2024-05-15 09:20:08.859791: Error creating table in Postgres: 'info'
+🟢 2024-06-05 19:02:50.936327: Table already exists in Postgres
+🔴 2024-06-05 19:02:50.936327: Error creating table in Postgres: 'info'
+🟢 2024-06-06 21:05:53.096963: Table already exists in Postgres
+🔴 2024-06-06 21:05:53.098006: Error creating table in Postgres: 'info'
+🟢 2024-06-09 20:20:08.689291: Table already exists in Postgres
+🔴 2024-06-09 20:20:08.690321: Error creating table in Postgres: 'info'
+🟢 2024-06-17 09:31:24.990826: Table already exists in Postgres
+🔴 2024-06-17 09:31:24.990826: Error creating table in Postgres: 'info'
+🟢 2024-06-17 14:13:05.549638: Table already exists in Postgres
+🔴 2024-06-17 14:13:05.550736: Error creating table in Postgres: 'info'
+🟢 2024-06-18 17:55:00.678028: Table already exists in Postgres
+🔴 2024-06-18 17:55:00.679028: Error creating table in Postgres: 'info'
+🟢 2024-06-19 08:55:42.086783: Table already exists in Postgres
+🔴 2024-06-19 08:55:42.087782: Error creating table in Postgres: 'info'
+🟢 2024-06-19 13:52:43.596408: Table already exists in Postgres
+🔴 2024-06-19 13:52:43.597408: Error creating table in Postgres: 'info'
+🟢 2024-06-20 21:02:09.968676: Table already exists in Postgres
+🔴 2024-06-20 21:02:09.970677: Error creating table in Postgres: 'info'
+🟢 2024-06-23 15:59:05.176780: Table already exists in Postgres
+🔴 2024-06-23 15:59:05.177777: Error creating table in Postgres: 'info'
+🟢 2024-06-25 19:58:57.035570: Table already exists in Postgres
+🔴 2024-06-25 19:58:57.036607: Error creating table in Postgres: 'info'
+🟢 2024-06-26 18:14:53.973545: Table already exists in Postgres
+🔴 2024-06-26 18:14:53.974529: Error creating table in Postgres: 'info'
+🟢 2024-07-09 22:02:05.033272: Table already exists in Postgres
+🔴 2024-07-09 22:02:05.034273: Error creating table in Postgres: 'info'
+🟢 2024-07-16 08:29:34.743913: Table already exists in Postgres
+🔴 2024-07-16 08:29:34.744964: Error creating table in Postgres: 'info'
+🟢 2024-07-22 20:39:15.957395: Table already exists in Postgres
+🔴 2024-07-22 20:39:15.958390: Error creating table in Postgres: 'info'
+🟢 2024-07-26 16:44:23.352217: Table already exists in Postgres
+🔴 2024-07-26 16:44:23.353229: Error creating table in Postgres: 'info'
+🟢 2024-07-30 19:47:47.778522: Table already exists in Postgres
+🔴 2024-07-30 19:47:47.780525: Error creating table in Postgres: 'info'
+🟢 2024-08-01 06:36:50.087666: Table already exists in Postgres
+🔴 2024-08-01 06:36:50.088737: Error creating table in Postgres: 'info'
+🟢 2024-08-05 23:09:24.997917: Table already exists in Postgres
+🔴 2024-08-05 23:09:24.998590: Error creating table in Postgres: 'info'
+🟢 2024-08-25 16:45:44.065775: Table already exists in Postgres
+🔴 2024-08-25 16:45:44.066314: Error creating table in Postgres: 'info'
+🟢 2024-08-27 20:01:02.530330: Table already exists in Postgres
+🔴 2024-08-27 20:01:02.531333: Error creating table in Postgres: 'info'
+🟢 2024-08-29 16:16:09.683655: Table already exists in Postgres
+🔴 2024-08-29 16:16:09.684661: Error creating table in Postgres: 'info'
+🟢 2024-08-29 16:20:48.360513: Table already exists in Postgres
+🔴 2024-08-29 16:20:48.361541: Error creating table in Postgres: 'info'
+🟢 2024-09-02 19:49:04.513326: Table already exists in Postgres
+🔴 2024-09-02 19:49:04.514327: Error creating table in Postgres: 'info'
+🟢 2024-09-16 18:51:25.780927: Table already exists in Postgres
+🔴 2024-09-16 18:51:25.780927: Error creating table in Postgres: 'info'
+🟢 2024-09-24 18:22:55.657303: Table already exists in Postgres
+🔴 2024-09-24 18:22:55.658305: Error creating table in Postgres: 'info'
+🟢 2024-10-08 10:00:06.322310: Table already exists in Postgres
+🔴 2024-10-08 10:00:06.323313: Error creating table in Postgres: 'info'
+🟢 2024-10-09 14:33:56.063678: Table already exists in Postgres
+🔴 2024-10-09 14:33:56.064710: Error creating table in Postgres: 'info'
+🟢 2024-10-10 15:09:07.033669: Table already exists in Postgres
+🔴 2024-10-10 15:09:07.035692: Error creating table in Postgres: 'info'
+🟢 2024-10-24 19:33:42.391665: Table already exists in Postgres
+🔴 2024-10-24 19:33:42.392667: Error creating table in Postgres: 'info'
+🟢 2024-10-24 19:38:33.919651: Table already exists in Postgres
+🔴 2024-10-24 19:38:33.919651: Error creating table in Postgres: 'info'
+🟢 2024-10-24 19:42:40.639397: Table already exists in Postgres
+🔴 2024-10-24 19:42:40.640398: Error creating table in Postgres: 'info'
+🟢 2024-10-24 19:48:36.070008: Table already exists in Postgres
+🔴 2024-10-24 19:48:36.071003: Error creating table in Postgres: 'info'
+🟢 2024-10-24 19:53:38.025648: Table already exists in Postgres
+🔴 2024-10-24 19:53:38.026238: Error creating table in Postgres: 'info'
+🟢 2024-10-24 19:57:40.385106: Table already exists in Postgres
+🔴 2024-10-24 19:57:40.386064: Error creating table in Postgres: 'info'
+🟢 2024-10-24 20:04:11.947098: Table already exists in Postgres
+🔴 2024-10-24 20:04:11.948109: Error creating table in Postgres: 'info'

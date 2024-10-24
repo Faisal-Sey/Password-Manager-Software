@@ -45,7 +45,7 @@ class PasswordManagerUI:
             font=self.button_font,
             bg=self.button_color,
             fg=self.button_text_color,
-            command=command
+            command=command,
         )
         self.add_button.pack(fill=tk.X, padx=20, pady=10)
 
@@ -73,3 +73,8 @@ class PasswordManagerUI:
 
     def pack(self) -> None:
         self.main_frame.pack()
+
+    def update_theme(self, button_color, button_text_color, background_color):
+        self.main_frame.configure(bg=background_color)
+        # for button in self.buttons:
+        #     button.configure(bg=button_color, fg=button_text_color)
