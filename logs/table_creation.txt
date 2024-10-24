@@ -122,3 +122,5 @@
 🔴 2024-10-24 20:04:11.948109: Error creating table in Postgres: 'info'
 🟢 2024-10-24 21:02:52.235694: Table already exists in Postgres
 🔴 2024-10-24 21:02:52.236693: Error creating table in Postgres: 'info'
+🟢 2024-10-24 21:06:01.222523: Table already exists in Postgres
+🔴 2024-10-24 21:06:01.224348: Error creating table in Postgres: 'info'
